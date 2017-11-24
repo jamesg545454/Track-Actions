@@ -7,7 +7,7 @@ Adds new actions to **Presonus Studio One** version 3 and greater as described b
 Any future changes or fixes will be listed here.
 
 **Installation** <br>
-To compile this kind of scriopt package, zip up all of the files, change the file extender to **.package**, and put it the **Studio One 3\Scripts** folder and restart Studio One. *The **trackactions.package** file is here in the repository so if you edit the code and zip it up again, don't include that package file in the zip file.*
+To compile this kind of scriopt package, zip up all of the files, change the file extender to **.package**, and put it the **Studio One 3\Scripts** folder and restart Studio One. *The **trackactions.package** file is here in the repository so if you edit the code and zip it up again, there's no need to include that package file in the zip package.*
 
 ***List Of Actions Included in The Package***<br>
 
