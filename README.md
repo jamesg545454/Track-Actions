@@ -1,6 +1,7 @@
 # Track-Actions
 **Track Actions**<br>
-Adds new actions to **Presonus Studio One** as described below.  Version 1.0.0 
+Adds new actions to **Presonus Studio One** version 3 and greater as described below.  <br>
+*Version 1.0.0*
 
 **Installation:** <br>
 To compile this kind of package, zip up all of the files and chang the file extender to **.package** and put it the *Studio One 3\Scripts* folder and restart Studio One although the **trackactions.package** file is already here in the repository.
