@@ -3,7 +3,7 @@
 
     This script adds various functionality to Presonus Studio One.
     Remove empty tracks, remove disabled tracks, remove inactive track layers,
-    custom fade actions like fade at splie, and a few track naming and formatting functions.
+    custom fade actions like fade at split, and a few track naming and formatting functions.
     
     Author: Lawrence
 
