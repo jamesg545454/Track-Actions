@@ -80,7 +80,7 @@
 
                     <Label title='' height='10'  /> 
 
-                    <Button name="saveFadeLength"  title="Save" width='155' height='24'  style="MyButton"/>                    
+                    <Button name="saveFadeOptions"  title="Save" width='155' height='24'  style="MyButton"/>                    
                    
                      
                 </Vertical>
