@@ -7,7 +7,7 @@
     
     Author: Lawrence
 
-    Feel free to copy and reuse any of this source code without restriction.
+    Feel free to copy and reuse any of this source code without restrictions.
 
     ** region tags are valid for code folding in Visual Studio Code
     https://code.visualstudio.com/download
