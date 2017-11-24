@@ -5,11 +5,11 @@ Adds new actions to Studio One as described below.
 
 To compile this kind of package, zip up all of the files and changed the extender to **.package** and put it the Studio One 3\Scripts folder and restart Studio One although the  **trackactions.package** file is already here in the repository.
 
-**Fade at Split** 
+**Fade at Split**
 
 Fading out and in at a clip split point based on custom fade settings. This works from right to left because the selected clip after a split defaults to the clip to the right of the split. If using it manually on an existing split, select the clip on the right.
 
-**Fade In/Out**
+**Fade In/Out**<br>
 Two actions to fade clips only in or out. This is more flexible than Create Autofades as it uses the custom fade settings and only fades in or out, not both at the same time, which in some cases can inadvertently affect a transient at the clip start if the clip start is trimmed close to a drum transient or similar.
 
 **Fade Settings**
