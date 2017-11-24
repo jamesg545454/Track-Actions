@@ -15,7 +15,7 @@ Dialog: Set the length and type of fade to use for the fade actions.
 
 **Remove Inactive Layers**<br>
 This removes all inactive layers for a selected single track. It makes a version backup before removing layers, *[Track Name] Before 
-Removing Layers*. I can't yet get this working for all selected tracks but if I ever can I will update it.
+Removing Layers*.  Note: I can't yet get this working for all selected tracks but if I ever can I will update it.
 
 **Remove Empty/Disabled Tracks**<br>
 These two actions remove all visible tracks that have no media clips on their active layers or are disabled in the second case. It makes a version backup before removing tracks, *Before Removing Empty [or Disabled]*
@@ -30,7 +30,7 @@ Dialog: Batch replace track names, case sensitive matching.
 Toggle between Unity and Dim Level. Default -10 dim level. Customize dim level by appending the master bus name. *["Master - 20"]*
 
 **Format Track Names**<br>
-Batch format track names, i.e., bAsS > Bass.
+Batch format track names, *i.e., bAsS > Bass*.
 
 **Reset Console**<br>
 Faders to 0, pans center, plugins off. Makes a version backup before reset *[Before Console Reset]*
