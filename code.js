@@ -201,9 +201,7 @@ function trackAction(actionValue)
                     var data = master.label.split("-");                
                     dimLevel = Number("-" + data[1].trim() );
                 }
-
                 catch(err)
-
                 {
                     // if parse fails, deafault to -10 dim
                     dimLevel = (-10) ;
@@ -240,8 +238,10 @@ function trackAction(actionValue)
                     var master = getMasterBus(this.context);
                     master.volume = 1;
 
-                    // turn off all plugins
-                    Host.GUI.Commands.interpretCommand("Device", "Activate All Inserts", Host.Attributes( ["State","0"] ) );
+                    // turn off all plugins, action toggle assumes they're all on
+                    // literal code below to force state off doesn't work for some reason, still toggles on/off
+                    // interpretCommand("Device", "Activate All Inserts", false, Host.Attributes( ["State", "0"] ) );
+                    Host.GUI.Commands.interpretCommand("Device", "Activate All Inserts");
 
                     var environment =  this.context.functions.root.environment;
                     var console = environment.find("MixerConsole");
@@ -270,7 +270,7 @@ function trackAction(actionValue)
                     var result = capWords(track.name.trim())
                     this.functions.renameEvent(track, result);
                 }
-
+                
             break;
             // endregion
         
@@ -279,7 +279,7 @@ function trackAction(actionValue)
 
             case "filter":
 
-                // close the track list to speed it up for large track counts
+                // close the track list to speed it up for larger track counts
                 Host.GUI.Commands.interpretCommand("View", "Track List", false, Host.Attributes(["State", "0"]));
 
                 // this.tracklist to pass object var to onParamChange()
@@ -329,19 +329,21 @@ function trackAction(actionValue)
             // -------------------------------------------------------------------------------
 
             case "fadeAtSplit" :
-
+                
+                // get saved fade settings if any and if not return defaults
                 var fade = getFadeSettings();
+                
                 var clips = new Array();
                 var selectFunctions = this.context.editor.createSelectFunctions(this.functions);
 
-                //type, length, bend | 0 = linear, Log = 1, Expo = 2
                 var iterator = this.context.iterator
                 while(!iterator.done())
                 {
                     var event = iterator.next();
                     clips.push(event)
                 }
-
+                
+                // type: 0 = linear, Log = 1, Exp = 2
                 this.functions.createFadeIn(  clips[0], fade.type, fade.length, fade.bend );  
                 this.functions.createFadeOut( clips[1], fade.type, fade.length, fade.bend  );
 
@@ -349,7 +351,6 @@ function trackAction(actionValue)
                 selectFunctions.select(clips[0]);
                 
             break;
-
             // endregion
 
             // region   ----------- FADE IN AND OUT ---------------------------------------------------------------------------------
@@ -394,7 +395,7 @@ function trackAction(actionValue)
     //region PARAM CHANGED
     this.paramChanged = function (param)
     {
-
+        
         // region HELP BUTTON
         if  ( param.name == "helpButton" )
         {   
@@ -459,7 +460,7 @@ function trackAction(actionValue)
                
                 var track = this.trackList.getTrack(i);
 
-                // exclude vca, folder, and automation tracks from the filter, for example,
+                // exclude vca, folder, and automation tracks from the filter. for example,
                 // hiding a folder track would also hide all of it's child tracks
                 if (  track.toString().indexOf("VCA") > -1   ||  track.toString().indexOf("Folder" ) > -1  || 
                         track.toString().indexOf("Automation") > -1 ) {  continue; }
@@ -496,7 +497,7 @@ function trackAction(actionValue)
 
 // ------- Targeted Create Instance Functions ----------------------------------------------------------------------------------------
 
-// region CREATEINSTANCE
+// region CREATE INSTANCES
 function removeEmpty()          { return new trackAction(   "empty"         ); }
 function removeDisabled()       { return new trackAction(   "disabled"      ); }
 function removeLayers()         { return new trackAction(   "removeLayers"  ); }
@@ -513,7 +514,7 @@ function fadeAtSplit()
 { 
     Host.GUI.Commands.interpretCommand("Navigation", "Left");
     Host.GUI.Commands.interpretCommand("Navigation", "Right Extend");
-    return new trackAction(   "fadeAtSplit"   ); 
+                                 return new trackAction(    "fadeAtSplit"   ); 
 }
 // endregion
 
@@ -556,7 +557,7 @@ function getTracks(context)
 
 // ---------------------------------------------------------------------------------------
 
-// return the master bus channel object
+// returns the master bus channel object
 function getMasterBus (context)
 {
     return context.functions.root.environment.find("MixerConsole").getChannelList(3).getChannel(0);
@@ -564,12 +565,14 @@ function getMasterBus (context)
 
 // ---------------------------------------------------------------------------------------
 
-// lowercase all letts and cap the first letter in every word
-function capWords(str) {
+// lowercase all letters and cap the first letter in every word
+function capWords(str) 
+{
     str = str.toLowerCase();
     var array1 = str.split(' ');
     var newarray1 = [];
-    for (var x = 0; x < array1.length; x++) {
+    for (var x = 0; x < array1.length; x++) 
+    {
         newarray1.push(array1[x].charAt(0).toUpperCase() + array1[x].slice(1));
     }
     return newarray1.join(' ');
@@ -577,7 +580,7 @@ function capWords(str) {
 
 // ---------------------------------------------------------------------------------------
 
-// shortcut to alert box
+// shortcut to call alert box
 function alert(msg)
 {
     Host.GUI.alert(msg);
@@ -585,7 +588,7 @@ function alert(msg)
 
 // ---------------------------------------------------------------------------------------
 
-// shortcut to ask message
+// shortcut to call ask message
 function ask(msg)
 {
     var result = Host.GUI.ask (msg)// != Host.GUI.Constants.kYes
@@ -608,7 +611,7 @@ function writeTextFile (folder, filename, text)
 
 // ---------------------------------------------------------------------------------------
 
-// read text file line by line into an array
+// read simple text file line by line into an array
 function readTextFile (folder, filename)
 {
     var path = Host.Url("local://$USERCONTENT/" + folder + "/" + filename + ".txt");
@@ -644,6 +647,7 @@ function getFadeSettings()
     }
     catch(err)
     {
+        // default settings if nothing has been saved yet
         fade.length = 0.005;
         fadeType = 1;
         bend = 0.6571009159088134765625;
@@ -653,5 +657,4 @@ function getFadeSettings()
 
     return( fade )
 }
-
 // endregion
