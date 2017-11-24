@@ -5,7 +5,7 @@
     Remove empty tracks, remove disabled tracks, remove inactive track layers,
     along with various track naming and formatting functions.
     
-    Author: Lawrence Farr
+    Author: Lawrence
 
     Feel free to copy and reuse any of this source code without restriction.
 
@@ -654,16 +654,4 @@ function getFadeSettings()
     return( fade )
 }
 
-// ---------------------------------------------------------------------------------------
-
-// list obkject properties, code testing
-function getAllPropertyNames(obj) {
-    var props = [];
-    do {
-        props = props.concat(Object.getOwnPropertyNames(obj));
-    } while (obj = Object.getPrototypeOf(obj));
-
-    var result = props.join('\r\n');
-    alert(String(result));
-}
 // endregion
