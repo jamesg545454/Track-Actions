@@ -81,7 +81,7 @@ function trackAction(actionValue)
             // region   ----------- REMOVE VISIBLE EMPTY TRACKS ---------------------------------------------------------------------
             case "empty":
 
-                // collect all tracks with no media on the active layer
+                // remove all tracks with no media on the active layer
                 var tracks = getTracks(this.context);
 
                 // iterate and save a version backup before removing the first track
