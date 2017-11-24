@@ -133,6 +133,8 @@ function trackAction(actionValue)
             // this function cuts media from the active layer, parses the number of inactive layers and removes all inactive layers,
             // removes any media from the last layer, and then pastes the original media back onto the active layer, essentially
             // removing all incactive layers and leaving the original media back to the active layer at the same position.
+                
+            // this could be done with a macro except for them nogt knowing the number of layers ahead of time.
 
             var trackList =  this.context.mainTrackList;
             var mediaWasCut = false;
