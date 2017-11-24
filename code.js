@@ -51,8 +51,8 @@ function trackAction(actionValue)
         this.fadeLength = this.paramList.addString("fadeLength") ;
 
         // save button on fade options dialog
-        this.saveFadeLength = this.paramList.addInteger(0,1,"saveFadeLength") ;
-        this.saveFadeLength.enabled = false;
+        this.saveFadeOptions = this.paramList.addInteger(0,1,"saveFadeOptions") ;
+        this.saveFadeOptions.enabled = false;
         
         return Host.Results.kResultOk; 
     }
