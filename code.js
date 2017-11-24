@@ -126,7 +126,7 @@ function trackAction(actionValue)
             break;
             // endregion
 
-            // region   ----------- REMOVE INACTIVE LAYERS A SINGE TRACK ------------------------------------------------------------
+            // region   ----------- REMOVE INACTIVE LAYERS FOR A SINGLE TRACK --------------------------------------------------------
             
             case "removeLayers":
 
