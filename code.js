@@ -405,7 +405,6 @@ function trackAction(actionValue)
     //region PARAM CHANGED
     this.paramChanged = function (param)
     {
-        
         // region HELP BUTTON
         if  ( param.name == "helpButton" )
         {   
@@ -419,7 +418,7 @@ function trackAction(actionValue)
         }
         
         // save fade options to disk
-        if (param.name == "fadeSaveOPtions")
+        if (param.name == "saveFadeOptions")
         {
             var text = this.fadeLength.string + "|" + this.fadeOptions.value.toString();
             writeTextFile (scriptTitle, "fadeSettings", text  )
@@ -549,9 +548,8 @@ function saveNewVersion(name)
 
 // -----------------------------------------------------------------------------------------------------------------------------------
 
-// track indexes change in real time when removing tracks so putting them
-// into an array allows addressing them directly and not by index when
-// doing things like removing tracks
+// track indexes change in real time when removing tracks so putting them into an array 
+// allows addressing them directly and not by index when doing things like removing tracks
 
 // returns an array of all visible tracks
 function getTracks(context)
