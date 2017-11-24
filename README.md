@@ -1,5 +1,7 @@
 # Track-Actions
-Adding new actions to Studio One as described below.  To compile this kind of package, zip up all of the files and changed the extender to **.package** and put it the Studio One 3\Scripts folder and restart Studio One.
+Adding new actions to Studio One as described below.  
+
+**Installation:** To compile this kind of package, zip up all of the files and changed the extender to **.package** and put it the Studio One 3\Scripts folder and restart Studio One although the  **trackactions.package** file is already here in the repository.
 
 **Fade at Split** 
 Fading out and in at a clip split point based on custom fade settings. This works from right to left because the selected clip after a split defaults to the clip to the right of the split. If using it manually on an existing split, select the clip on the right.
