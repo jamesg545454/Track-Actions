@@ -22,14 +22,14 @@ These two actions remove all visible tracks that have no media clips on their ac
 **Filter Tracks**
 Dialog: Only show the arrange tracks which contain the case insensitive search text, hide all others. *This action requires that **Track > Select Scene 1** be set to make all tracks visible for it to work correctly. It's a work in progress and has to exclude folder tracks by necessity.*
 
-**Replace Track Names** 
+**Replace Track Names**
 Dialog: Batch replace track names, case sensitive matching.
 
-**Toggle Dim Master Bus** 
+**Toggle Dim Master Bus**
 Toggle between Unity and Dim Level. Default -10 dim level. Customize dim level by appending the master bus name. *["Master - 20"]*
 
-**Format Track Names** 
-Batch format track names, *i.e., bAsS > Bass*.
+**Format Track Names**
+Batch format track names, i.e., bAsS > Bass.
 
 **Reset Console**
-Faders to 0, pans center, plugins off. Makes a version backup before reset *[Before Console Reset]*.
+Faders to 0, pans center, plugins off. Makes a version backup before reset *[Before Console Reset]*
