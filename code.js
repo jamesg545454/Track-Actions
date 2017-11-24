@@ -194,8 +194,7 @@ function trackAction(actionValue)
                 var master = getMasterBus(this.context);
                 var dimLevel = 0;
             
-                // try to get the dim value from the master bus name 
-                
+                // try to get the dim value from the master bus name       
                 try
                 {
                     var data = master.label.split("-");                
@@ -203,7 +202,7 @@ function trackAction(actionValue)
                 }
                 catch(err)
                 {
-                    // if parse fails, deafault to -10 dim
+                    // if parse fails, default to -10 dim
                     dimLevel = (-10) ;
                 }   
 
@@ -335,19 +334,24 @@ function trackAction(actionValue)
                 
                 var clips = new Array();
                 var selectFunctions = this.context.editor.createSelectFunctions(this.functions);
-
+                
+                // should be two clips selected, push to array
                 var iterator = this.context.iterator
                 while(!iterator.done())
                 {
                     var event = iterator.next();
                     clips.push(event)
                 }
-                
-                // type: 0 = linear, Log = 1, Exp = 2
+               
+                // types: 0 = linear, Log = 1, Exp = 2
+                // fade the clips in and out, right to left
                 this.functions.createFadeIn(  clips[0], fade.type, fade.length, fade.bend );  
                 this.functions.createFadeOut( clips[1], fade.type, fade.length, fade.bend  );
 
+                // deselect all clips
                 this.context.editor.selection.unselectAll();
+                
+                // select rightmost clip again
                 selectFunctions.select(clips[0]);
                 
             break;
@@ -355,9 +359,12 @@ function trackAction(actionValue)
 
             // region   ----------- FADE IN AND OUT ---------------------------------------------------------------------------------
             case "fadeIn" :
-
+                
+                // returns an object with the settings in it
                 var fade = getFadeSettings();
                 var iterator = this.context.iterator
+                
+                // apply fade in to all selected clips
                 while(!iterator.done())
                 {
                     var event = iterator.next();
@@ -369,9 +376,12 @@ function trackAction(actionValue)
             // -----------------------------------------------------------------------------
 
             case "fadeOut" :
-
+                
+                // returns an object with the settings in it
                 var fade = getFadeSettings();
                 var iterator = this.context.iterator
+                
+                // applyu fade out to all selected clips
                 while(!iterator.done())
                 {
                     var event = iterator.next();
@@ -402,11 +412,13 @@ function trackAction(actionValue)
             alert("'Track | Scene 1' must be set to show all tracks for the filter to work correctly.")
         }  
 
+        // enable the save button if length or type changes
         if (param.name == "fadeOptions" || param.name == "fadeLength")
         {
             this.saveFadeLength.enabled = true;
         }
-        // save fade length to disk
+        
+        // save fade options to disk (REM: global rename saveFadeLength to saveFadeOptions)
         if (param.name == "saveFadeLength")
         {
             var text = this.fadeLength.string + "|" + this.fadeOptions.value.toString();
@@ -419,14 +431,15 @@ function trackAction(actionValue)
 
         // ----- BATCH REPLACE PARTS OF TRACK NAMES --------------------------------------------------------------
 
+        // replace button on the form
         if ( param.name == "buttonReplace")
         {
             var tracks = getTracks(this.context);
             
+            // iterate tracks and perform text replace
             for ( i = 0; i < tracks.length; i++) 
             {
                 var track = tracks[i];
-                
                 if (track.name == null) {continue;}
                 var name  = track.name.toString();
                 var newname = name.replace(this.sourceBox.string.trim(), this.replaceBox.string.trim());
@@ -445,19 +458,22 @@ function trackAction(actionValue)
             this.context.editor.showSelection(0);
 
             // track scene one must make all tracks visible for the filter to work correctly
+            // recall track scene 1
             Host.studioapp.interpretCommand("Track", "Select Scene 1");
 
-            // if trim show all tracks, clear filter
+            // if the search box is empty, all tracks are showing.
+            // zoom full to view all tracks on screen and exit
             if (this.searchBox.string.trim() == "")
             {
                 Host.studioapp.interpretCommand("Zoom", "Zoom Full", false, Host.Attributes(["State", "1"]));
                 return;
             }
 
-            // iterate all tracks and hide what doesn't match
+            // iterate all tracks, compare, and hide what doesn't match
             for (i=0; i < this.trackList.numTracks; i++)
             {
-               
+                // because track indexes would change if read directly, they're
+                // read from an array instead where the indexes remain static
                 var track = this.trackList.getTrack(i);
 
                 // exclude vca, folder, and automation tracks from the filter. for example,
@@ -498,6 +514,7 @@ function trackAction(actionValue)
 // ------- Targeted Create Instance Functions ----------------------------------------------------------------------------------------
 
 // region CREATE INSTANCES
+// each function returns the same instance, but points to different actions with an argument
 function removeEmpty()          { return new trackAction(   "empty"         ); }
 function removeDisabled()       { return new trackAction(   "disabled"      ); }
 function removeLayers()         { return new trackAction(   "removeLayers"  ); }
