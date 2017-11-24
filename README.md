@@ -6,8 +6,8 @@ Adds new actions to **Presonus Studio One** version 3 and greater as described b
 **1.0.0**  <bf>
 Any future changes or fixes will be listed here.
 
-**Installation:** <br>
-To compile this kind of package, zip up all of the files and chang the file extender to **.package** and put it the *Studio One 3\Scripts* folder and restart Studio One although the **trackactions.package** file is already here in the repository.
+**Installation** <br>
+To compile this kind of scriopt package, zip up all of the files, change the file extender to **.package**, and put it the **Studio One 3\Scripts** folder and restart Studio One. *The **trackactions.package** file is here in the repository so if you edit the code and zip it up again, don't include that package file in the zip file.*
 
 **Fade at Split**<br>
 Fading out and in at a clip split point based on custom fade settings. This works from right to left because the selected clip after a split defaults to the clip to the right of the split. If using it manually on an existing split, select the clip on the right.
