@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Skin>
     <Resources>
         <Image name="background" url="images/background.png"/>
@@ -23,15 +23,15 @@
 
         <Style name="MyLabel" inherit="Standard.AddIn.Label" >
             <Font  name="textfont" themeid="PresonusUI" size="12" />
-			<!-- <Color name="textcolor" color="#82a6c8"/> -->
             <Align name="textalign"	align="center vcenter"/>
         </Style>
 
     </Styles>
-
+    
+    <!-- Forms -->
+	
     <Forms>
-
-        <!-- Filter by name -->
+        <!-- TRACK SEARCH FORM -->
         <Form name="TrackSearch" title="Filter Tracks" width="230" height="50"  image="background" windowstyle="dialogstyle restorepos" >
 
             <View size="15,7,250,600" >
@@ -48,7 +48,7 @@
             </View>
         </Form> 
 
-        <!-- Set length for fade at split -->
+        <!-- FADE SETTINGS FORM -->
         <Form name="Fade Settings" title="Fade Settings" width="195" height="170"  image="background" windowstyle="dialogstyle restorepos" >
 
             <View size="20,4,200,200" >
@@ -87,13 +87,12 @@
             </View>
         </Form> 
 
-        <!-- Replace text in track name -->
+        <!-- REPLACE TRACK NAME FORM -->
         <Form name="ReplaceNames" title="Edit Track Names" width="217" height="113"  image="background" windowstyle="dialogstyle restorepos" >
 
             <View size="15,7,280,600" >
                 <Vertical spacing="4" margin="0" >  
                     <Label title='' height='2'  />
-
                     <Vertical spacing="4" margin="0">   
 
                         <Horizontal spacing="2" margin="0">  
@@ -112,10 +111,10 @@
                             <Button name="buttonReplace"  title="Replace" width='188' height='24'  style="MyButton"/>   
                         </Horizontal> 
 
-                    </Vertical>   
-                     
+                    </Vertical>                  
                 </Vertical>
             </View>
         </Form>           
     </Forms>
+	
 </Skin>
