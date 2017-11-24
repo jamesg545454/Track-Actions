@@ -415,15 +415,15 @@ function trackAction(actionValue)
         // enable the save button if length or type changes
         if (param.name == "fadeOptions" || param.name == "fadeLength")
         {
-            this.saveFadeLength.enabled = true;
+            this.saveFadeOptions.enabled = true;
         }
         
         // save fade options to disk (REM: global rename saveFadeLength to saveFadeOptions)
-        if (param.name == "saveFadeLength")
+        if (param.name == "fadeSaveOPtions")
         {
             var text = this.fadeLength.string + "|" + this.fadeOptions.value.toString();
             writeTextFile (scriptTitle, "fadeSettings", text  )
-            this.saveFadeLength.enabled = false;
+            this.saveFadeOptions.enabled = false;
         }
         // endregion
 
