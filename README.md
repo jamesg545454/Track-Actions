@@ -1,5 +1,5 @@
 # Track-Actions
-Adding new actions to Studio One as described below.  
+Adds new actions to Studio One as described below.  
 
 **Installation:** To compile this kind of package, zip up all of the files and changed the extender to **.package** and put it the Studio One 3\Scripts folder and restart Studio One although the  **trackactions.package** file is already here in the repository.
 
