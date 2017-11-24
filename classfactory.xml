@@ -97,7 +97,7 @@
 		<Attribute id="menuPriority" value="1"/>
 	</ScriptClass>
 
-	<!-- Fade Settings Dialog-->
+<!-- Fade Settings Dialog-->
 	<ScriptClass
 		classID="{A0E25C34-B4F3-476F-8CC3-9A89E4CF88F5}"
 		category="EditTask"
@@ -109,7 +109,7 @@
 		<Attribute id="menuPriority" value="-1"/>
 	</ScriptClass>
 
-	<!-- Fade At Split -->
+<!-- Fade At Split -->
 	<ScriptClass
 		classID="{38319131-9CFC-43D9-8C39-4CC2E7BA8F95}"
 		category="EditTask"
@@ -121,7 +121,7 @@
 		<Attribute id="menuPriority" value="-1"/>
 	</ScriptClass>
 
-	<!-- Fade In -->
+<!-- Fade In -->
 	<ScriptClass
 		classID="{4D4B8EEF-6409-4AB4-8A31-0806E2FA3CD7}"
 		category="EditTask"
@@ -133,7 +133,7 @@
 		<Attribute id="menuPriority" value="-1"/>
 	</ScriptClass>
 
-	<!-- Fade Out -->
+<!-- Fade Out -->
 	<ScriptClass
 		classID="{C44C7F2C-FBAE-4C32-AF52-ACFE7B6CFDF3}"
 		category="EditTask"
