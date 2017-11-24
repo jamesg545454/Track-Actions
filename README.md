@@ -20,7 +20,7 @@ Removing Layers*. I can't yet get this working for all selected tracks but if I 
 These two actions remove all visible tracks that have no media clips on their active layers or are disabled in the second case. It makes a version backup before removing tracks, *Before Removing Empty [or Disabled]*
 
 **Filter Tracks**
-Dialog: Only show the arrange tracks which contain the case insensitive search text, hide all others. This action requires that **Track > Select Scene 1** be set to make all tracks visible for it to work correctly. It's a work in progress and has to exclude folder tracks by necessity.
+Dialog: Only show the arrange tracks which contain the case insensitive search text, hide all others. *This action requires that **Track > Select Scene 1** be set to make all tracks visible for it to work correctly. It's a work in progress and has to exclude folder tracks by necessity.*
 
 **Replace Track Names** 
 Dialog: Batch replace track names, case sensitive matching.
