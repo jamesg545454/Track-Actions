@@ -32,6 +32,5 @@ Toggle between Unity and Dim Level. Default -10 dim level. Customize dim level b
 **Format Track Names**<br>
 Batch format track names, i.e., bAsS > Bass.
 
-**Reset Console**
-
+**Reset Console**<br>
 Faders to 0, pans center, plugins off. Makes a version backup before reset *[Before Console Reset]*
