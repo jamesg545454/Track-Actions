@@ -418,7 +418,7 @@ function trackAction(actionValue)
             this.saveFadeOptions.enabled = true;
         }
         
-        // save fade options to disk (REM: global rename saveFadeLength to saveFadeOptions)
+        // save fade options to disk
         if (param.name == "fadeSaveOPtions")
         {
             var text = this.fadeLength.string + "|" + this.fadeOptions.value.toString();
