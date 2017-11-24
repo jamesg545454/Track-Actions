@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Skin>
+    <Resources>
+        <Image name="background" url="images/background.png"/>
+    </Resources>
+
+    <Styles>
+        <Style name="MyEditBox" inherit="Standard.AddIn.EditBox">
+            <Color name="backcolor" color="#090a0a"/>
+            <Font  name="textfont" themeid="PresonusUI" size="12" />
+        </Style>
+
+        <Style name="MyRadioButton" inherit="Standard.AddIn.Button">
+            <Font  name="textfont" themeid="PresonusUI" size="12" />
+            <Align name="textalign"	align="left vcenter"/>
+        </Style>
+
+        <Style name="MyButton" inherit="Standard.AddIn.Button">
+            <Font  name="textfont" themeid="PresonusUI" size="12" />
+        </Style>
+
+        <Style name="MySelectBox" inherit="Standard.AddIn.SelectBox"/>
+
+        <Style name="MyLabel" inherit="Standard.AddIn.Label" >
+            <Font  name="textfont" themeid="PresonusUI" size="12" />
+			<!-- <Color name="textcolor" color="#82a6c8"/> -->
+            <Align name="textalign"	align="center vcenter"/>
+        </Style>
+
+    </Styles>
+
+    <Forms>
+
+        <!-- Filter by name -->
+        <Form name="TrackSearch" title="Filter Tracks" width="230" height="50"  image="background" windowstyle="dialogstyle restorepos" >
+
+            <View size="15,7,250,600" >
+                <Vertical spacing="4" margin="0" >  
+                    <Label title='' height='2'  />
+
+                    <Horizontal spacing="4" margin="0">   
+                        <EditBox name="searchBox"  width='115' height='24' options="focus" style="MyEditBox"/>
+                        <Button name="helpButton"  title=" ?" width='15' height='24' options="focus" style="MyButton"/>
+                    </Horizontal>              
+                     <Label title='' height='10'  />
+                     
+                </Vertical>
+            </View>
+        </Form> 
+
+        <!-- Set length for fade at split -->
+        <Form name="Fade Settings" title="Fade Settings" width="195" height="170"  image="background" windowstyle="dialogstyle restorepos" >
+
+            <View size="20,4,200,200" >
+                <Vertical spacing="2" margin="0" >  
+                    <Label title='' height='4'  />
+
+                    <Horizontal spacing="4" margin="0"> 
+                        <Label title="Fade Length   "  height="24"  style="MyLabel"/> 
+                        <EditBox name="fadeLength"  height='24' width="50" style="MyEditBox" /> 
+                        <Label title=" ms "  height="24"  style="MyLabel"/>
+                    </Horizontal> 
+
+                    <Label title='' height='4'  />
+
+                    <Horizontal spacing="0" margin="0"> 
+                        <Label title='' width='40'/> 
+                        <RadioButton name="fadeOptions" title=" Linear" value="0" width="100" height="24" style="MyRadioButton"/>
+                    </Horizontal> 
+
+                    <Horizontal spacing="0" margin="0"> 
+                        <Label title='' width='40'/>
+                        <RadioButton name="fadeOptions" title=" Logarithmic" value="1" width="100" height="24"  style="MyRadioButton"/>
+                    </Horizontal> 
+
+                    <Horizontal spacing="0" margin="0"> 
+                        <Label title='' width='40'/>
+                        <RadioButton name="fadeOptions" title=" Exponential" value="2" width="100" height="24"  style="MyRadioButton" />
+                    </Horizontal>   
+
+                    <Label title='' height='10'  /> 
+
+                    <Button name="saveFadeLength"  title="Save" width='155' height='24'  style="MyButton"/>                    
+                   
+                     
+                </Vertical>
+            </View>
+        </Form> 
+
+        <!-- Replace text in track name -->
+        <Form name="ReplaceNames" title="Edit Track Names" width="217" height="113"  image="background" windowstyle="dialogstyle restorepos" >
+
+            <View size="15,7,280,600" >
+                <Vertical spacing="4" margin="0" >  
+                    <Label title='' height='2'  />
+
+                    <Vertical spacing="4" margin="0">   
+
+                        <Horizontal spacing="2" margin="0">  
+                            <Label title="Replace:" width="60"  height="24" style="smallTextButton"/> 
+                            <EditBox name="sourceBox"   width='125' height='24'  style="searchBox"/>
+                        </Horizontal>
+
+                        <Horizontal spacing="2" margin="0">  
+                            <Label title="With:" width="60"  height="24" style="smallTextButton"/> 
+                            <EditBox name="replaceBox"  width='125' height='24'  style="searchBox"/>
+                        </Horizontal> 
+
+                        <Label title='' height='2'/>
+
+                        <Horizontal spacing="2" margin="0"> 
+                            <Button name="buttonReplace"  title="Replace" width='188' height='24'  style="MyButton"/>   
+                        </Horizontal> 
+
+                    </Vertical>   
+                     
+                </Vertical>
+            </View>
+        </Form>           
+    </Forms>
+</Skin>

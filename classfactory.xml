@@ -1,0 +1,148 @@
+﻿
+<ClassFactory>
+
+<!-- Filter Tracks By Criteria -->
+	<ScriptClass
+		classID="{84200D4A-0523-4025-B2AD-41999EFD8C26}"
+		category="EditTask"
+		subCategory="TrackEdit"
+		name="Filter Tracks..."
+		sourceFile="code.js"
+		functionName="searchTracks"
+		metaClassID="{5BF1B237-DE56-41EB-A48D-E54F61756A9C}">
+		<Attribute id="menuPriority" value="0"/>
+	</ScriptClass>
+
+<!-- Format Track Names -->
+	<ScriptClass
+		classID="{8DCE12ED-8C5B-450E-9719-CFBC017FCE2D}"
+		category="EditTask"
+		subCategory="TrackEdit"
+		name="Format Track Names"
+		sourceFile="code.js"
+		functionName="formatNames"
+		metaClassID="{D92D0DA8-0326-41D5-B959-97739193D849}">
+		<Attribute id="menuPriority" value="0"/>
+	</ScriptClass>
+
+<!-- Remove Track Names -->
+	<ScriptClass
+		classID="{F0D0CA05-A4DD-4A69-8905-CB64858CB239}"
+		category="EditTask"
+		subCategory="TrackEdit"
+		name="Replace Track Names..."
+		sourceFile="code.js"
+		functionName="replaceNames"
+		metaClassID="{90A7B0EA-9E5F-42E5-AC4B-594CF4FAC2EF}">
+		<Attribute id="menuPriority" value="0"/>
+	</ScriptClass>
+
+<!-- Remove Empty Tracks -->
+	<ScriptClass
+		classID="{B4FDF805-F5F6-4503-B9D0-F4525EA55B83}"
+		category="EditTask"
+		subCategory="TrackEdit"
+		name="Remove Tracks: No Media"
+		sourceFile="code.js"
+		functionName="removeEmpty"
+		metaClassID="{E7B3DCB5-6259-4B5B-8517-86373D0B8D1E}">
+		<Attribute id="menuPriority" value="1"/>
+	</ScriptClass>
+
+<!-- Remove Disabled Tracks -->
+	<ScriptClass
+		classID="{1AAC6537-299A-4BE1-A709-F41F3581E693}"
+		category="EditTask"
+		subCategory="TrackEdit"
+		name="Remove Tracks: Disabled"
+		sourceFile="code.js"
+		functionName="removeDisabled"
+		metaClassID="{63AFDAD8-47AA-4CC3-ABB0-2F656E6C3C38}">
+		<Attribute id="menuPriority" value="1"/>
+	</ScriptClass>
+
+<!-- Remove Inactive Layers -->
+	<ScriptClass
+		classID="{8C302D56-8F9D-45B8-B28B-661893614392}"
+		category="EditTask"
+		subCategory="TrackEdit"
+		name="Remove Inactive Layers (single track)"
+		sourceFile="code.js"
+		functionName="removeLayers"
+		metaClassID="{6C1A2F4D-4112-4DC0-A286-88A94DFAC932}">
+		<Attribute id="menuPriority" value="1"/>
+	</ScriptClass>
+
+<!-- Toggle Master Bus Dim -->
+	<ScriptClass
+		classID="{6192A2D3-BDEA-4009-B2B2-AD4F3D2CE33C}"
+		category="EditTask"
+		subCategory="TrackEdit"
+		name="Toggle Dim Master Bus"
+		sourceFile="code.js"
+		functionName="dimMasterBus"
+		metaClassID="{C5973CC6-3E84-4F58-B180-F17BA826F1B6}">
+		<Attribute id="menuPriority" value="1"/>
+	</ScriptClass>
+
+<!-- Reset Mix Console -->
+	<ScriptClass
+		classID="{A6615658-1FDA-47C4-B4B3-0E9D74E0E95D}"
+		category="EditTask"
+		subCategory="TrackEdit"
+		name="Reset Console"
+		sourceFile="code.js"
+		functionName="resetConsole"
+		metaClassID="{FFE736B7-88DB-45C5-8200-8754C6417F2C}">
+		<Attribute id="menuPriority" value="1"/>
+	</ScriptClass>
+
+	<!-- Fade Settings Dialog-->
+	<ScriptClass
+		classID="{A0E25C34-B4F3-476F-8CC3-9A89E4CF88F5}"
+		category="EditTask"
+		subCategory="TrackEdit"
+		name="Fade Settings"
+		sourceFile="code.js"
+		functionName="fadeSettings"
+		metaClassID="{D39665B8-D7E0-4B91-B2F4-E511881CE3AF}">
+		<Attribute id="menuPriority" value="-1"/>
+	</ScriptClass>
+
+	<!-- Fade At Split -->
+	<ScriptClass
+		classID="{38319131-9CFC-43D9-8C39-4CC2E7BA8F95}"
+		category="EditTask"
+		subCategory="AudioEdit"
+		name="Fade at Split"
+		sourceFile="code.js"
+		functionName="fadeAtSplit"
+		metaClassID="{B3460265-DD25-4400-ABE2-0E6E7A3DD5DA}">
+		<Attribute id="menuPriority" value="-1"/>
+	</ScriptClass>
+
+	<!-- Fade In -->
+	<ScriptClass
+		classID="{4D4B8EEF-6409-4AB4-8A31-0806E2FA3CD7}"
+		category="EditTask"
+		subCategory="AudioEdit"
+		name="Fade In"
+		sourceFile="code.js"
+		functionName="fadeIn"
+		metaClassID="{CE1FA5B2-4ED7-4582-9B96-DCCAE9D5B568}">
+		<Attribute id="menuPriority" value="-1"/>
+	</ScriptClass>
+
+	<!-- Fade Out -->
+	<ScriptClass
+		classID="{C44C7F2C-FBAE-4C32-AF52-ACFE7B6CFDF3}"
+		category="EditTask"
+		subCategory="AudioEdit"
+		name="Fade Out"
+		sourceFile="code.js"
+		functionName="fadeOut"
+		metaClassID="{6F904B76-128D-47F2-B565-422F8378224E}">
+		<Attribute id="menuPriority" value="-1"/>
+	</ScriptClass>
+	
+</ClassFactory>
