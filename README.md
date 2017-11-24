@@ -26,7 +26,7 @@ Dialog: Only show the arrange tracks which contain the case insensitive search t
 Dialog: Batch replace track names, case sensitive matching.
 
 **Toggle Dim Master Bus** 
-Toggle between Unity and Dim Level. Default -10 dimf level. Customize dim level by appending the master bus name. ["Master - 20"]
+Toggle between Unity and Dim Level. Default -10 dimf level. Customize dim level by appending the master bus name. *["Master - 20"]*
 
 **Format Track Names** 
 Batch format track names, *i.e., bAsS > Bass*.
