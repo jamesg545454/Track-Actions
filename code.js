@@ -1,15 +1,15 @@
 ﻿// region COMMENTS
 /*  Track Actions
 
-    This script adds various track functionality to Presonus Studio One.
+    This script adds various functionality to Presonus Studio One.
     Remove empty tracks, remove disabled tracks, remove inactive track layers,
-    along with various track naming and formatting functions.
+    custom fade actions, and a few track naming and formatting functions.
     
     Author: Lawrence
 
     Feel free to copy and reuse any of this source code without restriction.
 
-    region tags are valid for code folding in Visual Studio Code
+    ** region tags are valid for code folding in Visual Studio Code
     https://code.visualstudio.com/download
 */
 // endregion
