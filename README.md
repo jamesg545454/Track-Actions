@@ -7,7 +7,7 @@ To compile this kind of script package, zip up all of the files, change the file
 
 ---
 
-***List Of Actions Included in The Package***<br>
+**List Of Actions Included in The Package**<br>
 
 **Version 1.0.0** <br>
 
