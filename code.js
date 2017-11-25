@@ -62,7 +62,6 @@ function trackAction(actionValue)
 
     this.performEdit = function (context)
     {    
-
         // region CONTEXT VARS
 
         this.context = context;
