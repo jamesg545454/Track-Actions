@@ -32,7 +32,8 @@ To compile this kind of script package, zip up all of the files, change the file
   Dialog: Batch replace track names, case sensitive matching.
 
   **Toggle Dim Master Bus** <br>
-  Toggle between Unity and Dim Level. Default -10 dim level. Customize dim level by appending the master bus name. *["Master - 20"]*
+  Toggle between Unity and Dim Level. Default -10 dim level. Customize dim level by appending the master bus name. <br>
+  *["Master - 20"]*
 
   **Format Track Names** <br>
   Batch format track names, *i.e., bAsS > Bass*.
