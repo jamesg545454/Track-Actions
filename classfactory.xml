@@ -144,5 +144,34 @@
 		metaClassID="{6F904B76-128D-47F2-B565-422F8378224E}">
 		<Attribute id="menuPriority" value="-1"/>
 	</ScriptClass>
+
+<!-- Nudge Play Cursor -->
+	<ScriptClass
+		classID="{26D8E757-CDBC-42F0-9900-6F233F8B3E46}"
+		category="EditTask"
+		subCategory="TrackEdit"
+		name="nudgePlayCursor"
+		sourceFile="code.js"
+		functionName="nudgePlayCursor"
+		metaClassID="{AE32CD9D-CE02-4346-B088-BBDA51A7625F}">
+		<Attribute id="menuPriority" value="-1"/>
+	</ScriptClass>
+
+<!-- Nudge Play Cursor Back -->
+	<ScriptClass
+		classID="{519FFDD2-DCBF-4D01-BFD8-8E12DA1AECC8}"
+		category="EditTask"
+		subCategory="TrackEdit"
+		name="nudgePlayCursorBack"
+		sourceFile="code.js"
+		functionName="nudgePlayCursorBack"
+		metaClassID="{76749341-CE10-40FF-B30C-B1D493281E73}">
+		<Attribute id="menuPriority" value="-1"/>
+	</ScriptClass>
+
+	
+
+
+
 	
 </ClassFactory>
