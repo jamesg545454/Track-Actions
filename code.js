@@ -595,7 +595,7 @@ function capWords(trackName)
     // create an array for the letters
     var chars = [];
     
-    for (var i = 0; i < words.length; i++) 
+    for (i = 0; i < words.length; i++) 
     {
         // capitalize the first letter in every word
         chars.push(words[i].charAt(0).toUpperCase() + words[i].slice(1));
