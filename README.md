@@ -43,5 +43,5 @@ To compile this kind of script package, zip up all of the files, change the file
 ***Version 1.0.1*** ------------------------------------------------<br>
 
 Added **Actions: Track > Nudge Play Cursor** & **Track > Nudge Play Cursor Back**.  <br>
-These move the play cursor forward or backward by the grid value if snap is on otherwise in 1 ms steps.  *They exist in the Track command category to allow them to be non-contextual to media selection.*
+These move the play cursor forward or backward by the grid value if snap is on otherwise in 1 ms steps.  *They exist in the Track command category to allow them to be non-contextual to media selection and also because the Transport menu is not available to scripted actions.*
 
