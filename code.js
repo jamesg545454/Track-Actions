@@ -134,7 +134,8 @@ function trackAction(actionValue)
             // removes any media from the last layer, and then pastes the original media back onto the active layer, essentially
             // removing all incactive layers and leaving the original media back to the active layer at the same position.
                 
-            // this could be done with a macro except for them nogt knowing the number of layers ahead of time.
+            // this could be done with a macro except for them not knowing the number of layers ahead of time and not being
+            // able to defer commands in macros
 
             var trackList =  this.context.mainTrackList;
             var mediaWasCut = false;
@@ -154,7 +155,7 @@ function trackAction(actionValue)
                 // if multiple tracks were originally selected
                 trackList.selectTrack(track);
 
-                // force off automataion visibility before selection and 
+                // force automataion visibility off before selection and 
                 // cutting, otherwise cut will cut automation and not media
                 Host.GUI.Commands.interpretCommand("Automation", "Show / Hide", false, Host.Attributes(["State", "0"]));
 
