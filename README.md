@@ -5,9 +5,11 @@ Adds new actions to **Presonus Studio One** version 3 and greater as described b
 **Installation** <br>
 To compile this kind of script package, zip up all of the files, change the file extender to **.package**, and put it the **Studio One 3\Scripts** folder and restart Studio One. *The **trackactions.package** file is here in the repository so if you edit the code and zip it up again, there's no need to include that package file in the zip package.*
 
+---
+
 ***List Of Actions Included in The Package***<br>
 
-***Version 1.0.0*** ------------------------------------------------<br>
+***Version 1.0.0*** <br>
 
   **Fade at Split** <br>
   Fading out and in at a clip split point based on custom fade settings. This works from right to left because the selected clip after a split defaults to the clip to the right of the split. If using it manually on an existing split, select the clip on the right.
@@ -40,8 +42,10 @@ To compile this kind of script package, zip up all of the files, change the file
 
   **Reset Console** <br>
   Faders to 0, pans center, plugins off. Makes a version backup before reset *[Before Console Reset]*
+  
+  ---
 
-***Version 1.0.1*** ------------------------------------------------<br>
+***Version 1.0.1*** <br>
 
 Added **Actions: Track > Nudge Play Cursor** & **Track > Nudge Play Cursor Back**.  <br>
 These move the play cursor forward or backward by the grid value if snap is on otherwise in 1 ms steps.  *They exist in the Track command category to allow them to be non-contextual to media selection and also because the Transport menu is not available to scripted actions.*
