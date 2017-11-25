@@ -9,7 +9,7 @@ To compile this kind of script package, zip up all of the files, change the file
 
 ***List Of Actions Included in The Package***<br>
 
-***Version 1.0.0*** <br>
+**Version 1.0.0** <br>
 
 + **Fade at Split** <br>
 Fading out and in at a clip split point based on custom fade settings. This works from right to left because the selected clip after a split defaults to the clip to the right of the split. If using it manually on an existing split, select the clip on the right.
@@ -45,7 +45,7 @@ These two actions remove all visible tracks that have no media clips on their ac
   
   ---
 
-***Version 1.0.1*** <br>
+**Version 1.0.1** <br>
 
 + **Nudge Play Cursor** - **Nudge Play Cursor Back** <br>
 These move the play cursor forward or backward by the grid value if snap is on or if snap is off in 1 ms steps.  These actions exist in the **Track** command category to allow them to be non-contextual to media selection and also because the Transport category is not available to categorize scripted actions.
