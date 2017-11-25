@@ -41,6 +41,5 @@ To compile this kind of script package, zip up all of the files, change the file
   Faders to 0, pans center, plugins off. Makes a version backup before reset *[Before Console Reset]*
 
 ***Version 1.0.1*** ------------------------------------------------<br>
-
-  Added **Actions: Track > Nudge Play Cursor** & **Track > Nudge Play Cursor Back**.  These move the play cursor forward or backward by the grid value if snap is on otherwise in 1 ms steps.  *They exist in the Track command category to allow them to be non-contextual to media selection.*
+Added **Actions: Track > Nudge Play Cursor** & **Track > Nudge Play Cursor Back**.  These move the play cursor forward or backward by the grid value if snap is on otherwise in 1 ms steps.  *They exist in the Track command category to allow them to be non-contextual to media selection.*
 
