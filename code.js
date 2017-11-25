@@ -584,16 +584,25 @@ function getMasterBus (context)
 // ---------------------------------------------------------------------------------------
 
 // lowercase all letters and cap the first letter in every word
-function capWords(str) 
+function capWords(trackName) 
 {
-    str = str.toLowerCase();
-    var array1 = str.split(' ');
-    var newarray1 = [];
-    for (var x = 0; x < array1.length; x++) 
+    // make all lower case
+    trackName = trackName.toLowerCase();
+    
+    // split words into an array
+    var words = trackName.split(' ');
+    
+    // create an array for the letters
+    var chars = [];
+    
+    for (var x = 0; x < words.length; x++) 
     {
-        newarray1.push(array1[x].charAt(0).toUpperCase() + array1[x].slice(1));
+        // capitalizw the first letter in ever word
+        chars.push(words[x].charAt(0).toUpperCase() + words[x].slice(1));
     }
-    return newarray1.join(' ');
+    
+    // put humpy back together and return it
+    return chars.join(' ');
 }
 
 // ---------------------------------------------------------------------------------------
