@@ -7,7 +7,7 @@
     
     Author: Lawrence
 
-    Feel free to copy and reuse any of this source code without restrictions.
+    Feel free to copy and reuse any of this source code without restriction.
 
     ** region tags are valid for code folding in Visual Studio Code
     https://code.visualstudio.com/download
@@ -62,6 +62,7 @@ function trackAction(actionValue)
 
     this.performEdit = function (context)
     {    
+
         // region CONTEXT VARS
 
         this.context = context;
@@ -72,6 +73,7 @@ function trackAction(actionValue)
         var savedEmpty = false
         var savedDisabled = false;   
         // endregion
+
 
         // region SWITCH / SWITCH CONTEXTUAL ACTIONS
 
@@ -133,9 +135,9 @@ function trackAction(actionValue)
             // this function cuts media from the active layer, parses the number of inactive layers and removes all inactive layers,
             // removes any media from the last layer, and then pastes the original media back onto the active layer, essentially
             // removing all incactive layers and leaving the original media back to the active layer at the same position.
-                
-            // this could be done with a macro except for them not knowing the number of layers ahead of time and not being
-            // able to defer commands in macros
+
+            // this could be done with a macro except for it having no way to know the number of layers ahead of time and not.
+            // being able to defer the actions
 
             var trackList =  this.context.mainTrackList;
             var mediaWasCut = false;
@@ -155,7 +157,7 @@ function trackAction(actionValue)
                 // if multiple tracks were originally selected
                 trackList.selectTrack(track);
 
-                // force automataion visibility off before selection and 
+                // force off automataion visibility before selection and 
                 // cutting, otherwise cut will cut automation and not media
                 Host.GUI.Commands.interpretCommand("Automation", "Show / Hide", false, Host.Attributes(["State", "0"]));
 
@@ -352,7 +354,7 @@ function trackAction(actionValue)
                 this.functions.createFadeOut( clips[1], fade.type, fade.length, fade.bend  );
 
                 // deselect all clips
-                this.context.editor.selection.unselectAll();
+                Host.GUI.Commands.interpretCommand("Edit","Deselect All");
                 
                 // select rightmost clip again
                 selectFunctions.select(clips[0]);
@@ -361,6 +363,7 @@ function trackAction(actionValue)
             // endregion
 
             // region   ----------- FADE IN AND OUT ---------------------------------------------------------------------------------
+            
             case "fadeIn" :
                 
                 // returns an object with the settings in it
@@ -391,7 +394,23 @@ function trackAction(actionValue)
                     this.functions.createFadeOut( event, fade.type, fade.length, fade.bend ); 
                 } 
             
-            break;             
+            break;    
+            // endregion
+
+            // region ------------- NUDGE PLAY CURSOR ---------------------------------------------------------------------------------
+            
+            case "nudgePlayCursor" :
+                Host.studioapp.interpretCommand("Edit", "Create Range from Cursor");
+                Host.studioapp.interpretCommand("Transport", "Locate Selection End");
+                Host.studioapp.interpretCommand("Edit", "Deselect All");
+            break;
+
+            case "nudgePlayCursorBack" :
+                Host.studioapp.interpretCommand("Edit", "Create Range from Cursor");
+                Host.studioapp.interpretCommand("Edit", "Move Range Back");
+                Host.studioapp.interpretCommand("Transport", "Locate Selection");
+                Host.studioapp.interpretCommand("Edit", "Deselect All");
+            break;
             // endregion          
 
         }   
@@ -517,17 +536,19 @@ function trackAction(actionValue)
 
 // region CREATE INSTANCES
 // each function returns the same instance, but points to different actions with an argument
-function removeEmpty()          { return new trackAction(   "empty"         ); }
-function removeDisabled()       { return new trackAction(   "disabled"      ); }
-function removeLayers()         { return new trackAction(   "removeLayers"  ); }
-function searchTracks()         { return new trackAction(   "filter"        ); }
-function dimMasterBus()         { return new trackAction(   "dimMaster"     ); }
-function resetConsole()         { return new trackAction(   "resetMixer"    ); }
-function formatNames()          { return new trackAction(   "formatNames"   ); }
-function replaceNames()         { return new trackAction(   "replaceNames"  ); }
-function fadeSettings()         { return new trackAction(   "fadeSettings"  ); }
-function fadeIn()               { return new trackAction(   "fadeIn"        ); }
-function fadeOut()              { return new trackAction(   "fadeOut"       ); }
+function removeEmpty()          { return new trackAction(   "empty"                 ); }
+function removeDisabled()       { return new trackAction(   "disabled"              ); }
+function removeLayers()         { return new trackAction(   "removeLayers"          ); }
+function searchTracks()         { return new trackAction(   "filter"                ); }
+function dimMasterBus()         { return new trackAction(   "dimMaster"             ); }
+function resetConsole()         { return new trackAction(   "resetMixer"            ); }
+function formatNames()          { return new trackAction(   "formatNames"           ); }
+function replaceNames()         { return new trackAction(   "replaceNames"          ); }
+function fadeSettings()         { return new trackAction(   "fadeSettings"          ); }
+function fadeIn()               { return new trackAction(   "fadeIn"                ); }
+function fadeOut()              { return new trackAction(   "fadeOut"               ); }
+function nudgePlayCursor()      { return new trackAction(   "nudgePlayCursor"       ); }
+function nudgePlayCursorBack()  { return new trackAction(   "nudgePlayCursorBack"   ); }
 
 function fadeAtSplit()          
 { 
@@ -586,7 +607,7 @@ function getMasterBus (context)
 // lowercase all letters and cap the first letter in every word
 function capWords(trackName) 
 {
-    // make all lower case
+    // make text lower case
     trackName = trackName.toLowerCase();
     
     // split words into an array
@@ -601,9 +622,10 @@ function capWords(trackName)
         chars.push(words[i].charAt(0).toUpperCase() + words[i].slice(1));
     }
     
-    // put humpy back together and return it
+    // put humpy back together and return him
     return chars.join(' ');
 }
+
 
 // ---------------------------------------------------------------------------------------
 
@@ -618,7 +640,7 @@ function alert(msg)
 // shortcut to call ask message
 function ask(msg)
 {
-    var result = Host.GUI.ask (msg)// != Host.GUI.Constants.kYes
+    var result = Host.GUI.ask (msg) // != Host.GUI.Constants.kYes
     return result;
 }
 
@@ -683,5 +705,21 @@ function getFadeSettings()
     if (fade.type == 2) {fade.bend = 0.14595067501068115234375} else {fade.bend = 0.6571009159088134765625}
 
     return( fade )
+}
+
+function clearSelection(context)
+{
+    context.editor.selection.unselectAll();
+}
+
+// test function to parse object properties
+function getAllPropertyNames(obj) {
+    var props = [];
+    do {
+        props = props.concat(Object.getOwnPropertyNames(obj));
+    } while (obj = Object.getPrototypeOf(obj));
+
+    var result = props.join('\r\n');
+    alert(String(result));
 }
 // endregion
