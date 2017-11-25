@@ -544,7 +544,7 @@ function dimMasterBus()         { return new trackAction(   "dimMaster"         
 function resetConsole()         { return new trackAction(   "resetMixer"            ); }
 function formatNames()          { return new trackAction(   "formatNames"           ); }
 function replaceNames()         { return new trackAction(   "replaceNames"          ); }
-function fadeSettings()         { return new trackAction(   "getFadeSettings"          ); }
+function fadeSettings()         { return new trackAction(   "getFadeSettings"       ); }
 function fadeIn()               { return new trackAction(   "fadeIn"                ); }
 function fadeOut()              { return new trackAction(   "fadeOut"               ); }
 function nudgePlayCursor()      { return new trackAction(   "nudgePlayCursor"       ); }
