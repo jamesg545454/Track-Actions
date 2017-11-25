@@ -108,7 +108,7 @@ function trackAction(actionValue)
 
             // region   ----------- REMOVE VISIBLE DISABLED TRACKS ------------------------------------------------------------------
             
-            case "removedisabledTracks":
+            case "removeDisabledTracks":
 
                 var tracks = getTracks( this.context);
 
@@ -281,7 +281,7 @@ function trackAction(actionValue)
             // region   ----------- OPEN TRACK FILTER DIALOG ------------------------------------------------------------------------
             // *** filter only works if Track Scene 1 is set to make all tracks visible ***
 
-            case "filter":
+            case "filterTracks":
 
                 // close the track list to speed it up for larger track counts
                 Host.GUI.Commands.interpretCommand("View", "Track List", false, Host.Attributes(["State", "0"]));
@@ -309,7 +309,7 @@ function trackAction(actionValue)
             
             // region   ----------- FADE IN AND OUT AT SPLIT POINT ------------------------------------------------------------------
             
-            case "fadeSettings" :
+            case "getFadeSettings" :
   
                 // get the settings from disk if any
                 try
@@ -539,12 +539,12 @@ function trackAction(actionValue)
 function removeEmpty()          { return new trackAction(   "removeEmptyTracks"     ); }
 function removeDisabled()       { return new trackAction(   "removeDisabledTracks"  ); }
 function removeLayers()         { return new trackAction(   "removeInactiveLayers"  ); }
-function searchTracks()         { return new trackAction(   "filter"                ); }
+function searchTracks()         { return new trackAction(   "filterTracks"          ); }
 function dimMasterBus()         { return new trackAction(   "dimMaster"             ); }
 function resetConsole()         { return new trackAction(   "resetMixer"            ); }
 function formatNames()          { return new trackAction(   "formatNames"           ); }
 function replaceNames()         { return new trackAction(   "replaceNames"          ); }
-function fadeSettings()         { return new trackAction(   "fadeSettings"          ); }
+function fadeSettings()         { return new trackAction(   "getFadeSettings"          ); }
 function fadeIn()               { return new trackAction(   "fadeIn"                ); }
 function fadeOut()              { return new trackAction(   "fadeOut"               ); }
 function nudgePlayCursor()      { return new trackAction(   "nudgePlayCursor"       ); }
