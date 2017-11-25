@@ -81,7 +81,7 @@ function trackAction(actionValue)
         {
 
             // region   ----------- REMOVE VISIBLE EMPTY TRACKS ---------------------------------------------------------------------
-            case "empty":
+            case "removeEmptyTracks":
 
                 // remove all tracks with no media on the active layer
                 var tracks = getTracks(this.context);
@@ -108,7 +108,7 @@ function trackAction(actionValue)
 
             // region   ----------- REMOVE VISIBLE DISABLED TRACKS ------------------------------------------------------------------
             
-            case "disabled":
+            case "removedisabledTracks":
 
                 var tracks = getTracks( this.context);
 
@@ -130,7 +130,7 @@ function trackAction(actionValue)
 
             // region   ----------- REMOVE INACTIVE LAYERS FOR A SINGLE TRACK --------------------------------------------------------
             
-            case "removeLayers":
+            case "removeInactiveLayers":
 
             // this function cuts media from the active layer, parses the number of inactive layers and removes all inactive layers,
             // removes any media from the last layer, and then pastes the original media back onto the active layer, essentially
@@ -536,9 +536,9 @@ function trackAction(actionValue)
 
 // region CREATE INSTANCES
 // each function returns the same instance, but points to different actions with an argument
-function removeEmpty()          { return new trackAction(   "empty"                 ); }
-function removeDisabled()       { return new trackAction(   "disabled"              ); }
-function removeLayers()         { return new trackAction(   "removeLayers"          ); }
+function removeEmpty()          { return new trackAction(   "removeEmptyTracks"     ); }
+function removeDisabled()       { return new trackAction(   "removeDisabledTracks"  ); }
+function removeLayers()         { return new trackAction(   "removeInactiveLayers"  ); }
 function searchTracks()         { return new trackAction(   "filter"                ); }
 function dimMasterBus()         { return new trackAction(   "dimMaster"             ); }
 function resetConsole()         { return new trackAction(   "resetMixer"            ); }
