@@ -148,16 +148,18 @@ function trackAction(actionValue)
                 
             var trackList =  this.context.mainTrackList;
             var mediaWasCut = false;
-            
+                
                 // get the first selected track only
                 var track = trackList.getSelectedTrack(0);
                 
-                // if no track is currently selected, do nothing
-                if (track == undefined) { return; }
+                // if the track class has no layers, do nothing
+                if ( track.layers.count == undefined ) { return; }
 
-                // if the track has no inactive layers don't do anything
+                // get the total number of layers
                 var count = track.layers.count;
-                if ( count == 1 || count == undefined ) { return; }
+                
+                // if the track has no inactive layers, do nothing
+                if ( count == 1 ) { return; }
 
                 // save a version backup before removing any layers
                 saveNewVersion(track.name + ": Before Removing Layers");
