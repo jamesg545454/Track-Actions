@@ -386,7 +386,7 @@ function trackAction(actionValue)
             
             case "fadeIn" :
                 
-                // returns an object with the settings in it
+                // returns an object with the fade settings in it
                 var fade = getFadeSettings();
                 var iterator = this.context.iterator
                 
@@ -403,11 +403,11 @@ function trackAction(actionValue)
 
             case "fadeOut" :
                 
-                // returns an object with the settings in it
+                // returns an object with the fade settings in it
                 var fade = getFadeSettings();
                 var iterator = this.context.iterator
                 
-                // applyu fade out to all selected clips
+                // apply fade out to all selected clips
                 while(!iterator.done())
                 {
                     var event = iterator.next();
