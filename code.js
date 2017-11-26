@@ -722,7 +722,7 @@ function getFadeSettings()
     }
 
     // set a good default bend curve based on the fade type
-    if (fade.type == 2) {fade.bend = 0.14595067501068115234375} else {fade.bend = 0.6571009159088134765625}
+    if (fade.type == 2) {fade.bend = 0.15} else {fade.bend = 0.66}
 
     return( fade )
 }
