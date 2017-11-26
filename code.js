@@ -141,7 +141,7 @@ function trackAction(actionValue)
             var trackList =  this.context.mainTrackList;
             var mediaWasCut = false;
             
-                // act on the first selected track only
+                // get the first selected track only
                 var track = trackList.getSelectedTrack(0);
                 
                 // if no track is currently selected, do nothing
