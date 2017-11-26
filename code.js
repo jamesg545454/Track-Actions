@@ -171,7 +171,7 @@ function trackAction(actionValue)
 
                 // force off automataion visibility before selection and cutting
                 // otherwise cut may cut and paste automation and not media
-                Host.GUI.Commands.interpretCommand("Automation", "Show / Hide", false, Host.Attributes(["State", "0"]));
+                Host.GUI.Commands.interpretCommand( "Automation", "Show / Hide", false, Host.Attributes( ["State", "0"] ) );
 
                 // if active layer has any media clips, cut them to the clipboard
                 if ( !track.isEmpty() )
