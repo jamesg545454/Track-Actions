@@ -156,8 +156,8 @@ function trackAction(actionValue)
                 // if multiple tracks were originally selected
                 trackList.selectTrack(track);
 
-                // force off automataion visibility before selection and 
-                // cutting, otherwise cut will cut automation and not media
+                // force off automataion visibility before selection and cutting
+                // otherwise cut may cut and paste automation and not media
                 Host.GUI.Commands.interpretCommand("Automation", "Show / Hide", false, Host.Attributes(["State", "0"]));
 
                 // if active layer has any media clips, cut them to the clipboard
@@ -170,7 +170,7 @@ function trackAction(actionValue)
                     mediaWasCut = true;
                 }
 
-                // remove all inactive layers, count - 1, the last active layer can't be removed
+                // remove all inactive layers, layer count - 1, the last single layer can't be removed
                 for (layer = 0; layer < count - 1; layer++)
                 {
                     Host.GUI.Commands.deferCommand("Track", "Remove Layer");
