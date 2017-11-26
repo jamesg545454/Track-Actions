@@ -94,7 +94,7 @@ function trackAction(actionValue)
                     if ( track.isEmpty() )
                     {
                         // only remove empty visible audio and midi tracks
-                        if (track.mediaType == "Audio" || track.mediaType == "Music")
+                        if (track.mediaType == "Audio" || track.mediaType == "Music") 
                         {
                             // only save version backup on the first loop iteration
                             if (savedEmpty == false) { saveNewVersion("Before Removing Empty Tracks"); savedEmpty = true; }
@@ -725,5 +725,23 @@ function getFadeSettings()
     if (fade.type == 2) {fade.bend = 0.15} else {fade.bend = 0.66}
 
     return( fade )
+}
+
+// ---------------------------------------------------------------------------------------
+
+function clearSelection(context)
+{
+    context.editor.selection.unselectAll();
+}
+
+// test function to parse object properties
+function getAllPropertyNames(obj) {
+    var props = [];
+    do {
+        props = props.concat(Object.getOwnPropertyNames(obj));
+    } while (obj = Object.getPrototypeOf(obj));
+
+    var result = props.join('\r\n');
+    alert(String(result));
 }
 // endregion
