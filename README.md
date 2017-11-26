@@ -50,6 +50,8 @@ These two actions remove all visible tracks that have no media clips on their ac
 + **Nudge Play Cursor** - **Nudge Play Cursor Back** <br>
 These move the play cursor forward or backward by the grid value if snap is on or if snap is off in 1 ms steps.  These actions exist in the **Track** command category to allow them to be non-contextual to media selection and also because the Transport category is not available to categorize scripted actions.
 
+---
+
 **Version 1.0.2**
 + Fix: Non-fatal error with Remove Inactive Layers if no arrange track is selected.
 
