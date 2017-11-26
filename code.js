@@ -88,7 +88,7 @@ function trackAction(actionValue)
                 // iterate tracks and save a version backup before removing the first track
                 for (i=0; i < tracks.length; i++)
                 {
-                    // get the current track object
+                    // get the next track in the array
                     var track = tracks[i];
 
                     if ( track.isEmpty() )
@@ -118,6 +118,7 @@ function trackAction(actionValue)
                 // iterate tracks
                 for (i=0; i < tracks.length; i++)
                 {
+                    // get the next track in the array
                     var track = tracks[i];
 
                     // avoid errors on tracks that cannot be disabled
@@ -247,25 +248,33 @@ function trackAction(actionValue)
                     // store a version before the reset
                     saveNewVersion("Before Reset Console");
 
-                    // master bus to unity gain
+                    // set the master bus to unity gain
                     var master = getMasterBus(this.context);
                     master.volume = 1;
 
-                    // turn off all plugins, action toggle assumes they're all on
-                    // literal code below to force state off doesn't work for some reason, still toggles on/off
+                    // turn off all plugins, the action toggle assumes they're currently on and the literal
+                    // code below to force the state off doesn't work for some reason, still toggles on/off
                     // interpretCommand("Device", "Activate All Inserts", false, Host.Attributes( ["State", "0"] ) );
                     Host.GUI.Commands.interpretCommand("Device", "Activate All Inserts");
 
+                    // get the mixer channel list
                     var environment =  this.context.functions.root.environment;
                     var console = environment.find("MixerConsole");
                     var channelList = console.getChannelList(1);
 
-                    // reset faders and pans
+                    // iterate and reset faders and pans for all mixer channels
                     for (i=0; i < channelList.numChannels; i++)
                     {
                         var channel = channelList.getChannel(i)  
                         channel.focus(); 
+                        
+                        // exclude VCA's from fader reset (uncomment)
+                        // if ( channel.toString.indexOf ( "VCA" ) > 0  ) ( continue; )
+                        
+                        // trap any potential error, fader to infinity
                         if (channel.volume != undefined)    { channel.volume = 0; }
+                        
+                        // VCA's don't have pans, avoid potential error
                         if (channel.pan != undefined )      { channel.pan = 0.5;  }
                     }
                 }
