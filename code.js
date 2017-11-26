@@ -146,7 +146,7 @@ function trackAction(actionValue)
 
                 // if it has no inactive layers don't do anything
                 var count = track.layers.count;
-                if ( count == 1 ) { return; }
+                if ( count == 1 || count == undefined ) { return; }
 
                 // save a version backup before removing any layers
                 saveNewVersion(track.name + ": Before Removing Layers");
