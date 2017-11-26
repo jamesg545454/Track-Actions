@@ -131,9 +131,9 @@ function trackAction(actionValue)
             
             case "removeInactiveLayers":
 
-            // this function cuts media from the active layer, parses the number of inactive layers, removes all inactive layers,
-            // removes any media from the last layer, and then pastes the original media back onto the active layer, essentially
-            // removing all incactive layers and leaving the original media back to the active layer at the same position.
+            // this function cuts media from the active layer, gets the number of inactive layers, removes all inactive layers,
+            // deletes any media from the last layer, then pastes the original media back onto the active layer, essentially
+            // removing all inactive layers and leaving the original media on the active layer at the same position.
 
             // this could be done with a macro except for it having no way to know the number of layers ahead of time and not
             // being able to defer the remove layer actions, and of course not being able to flag if media was cut or not
