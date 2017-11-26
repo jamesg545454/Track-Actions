@@ -148,8 +148,8 @@ function trackAction(actionValue)
                 // get the first selected track only
                 var track = trackList.getSelectedTrack(0);
                 
-                // if the track class has no layers, do nothing
-                if ( track.layers.count == undefined ) { return; }
+                // if tno track selected of track class has no layers, do nothing
+                if (  track == undefined || track.layers.count  ) { return; }
 
                 // get the total number of layers
                 var count = track.layers.count;
@@ -390,7 +390,7 @@ function trackAction(actionValue)
                 var fade = getFadeSettings();
                 var iterator = this.context.iterator
                 
-                // apply fade in to all selected clips
+                // apply fade in to all selected audio clips
                 while(!iterator.done())
                 {
                     var event = iterator.next();
@@ -407,7 +407,7 @@ function trackAction(actionValue)
                 var fade = getFadeSettings();
                 var iterator = this.context.iterator
                 
-                // apply fade out to all selected clips
+                // apply fade out to all selected audio clips
                 while(!iterator.done())
                 {
                     var event = iterator.next();
