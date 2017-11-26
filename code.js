@@ -726,20 +726,4 @@ function getFadeSettings()
 
     return( fade )
 }
-
-function clearSelection(context)
-{
-    context.editor.selection.unselectAll();
-}
-
-// test function to parse object properties
-function getAllPropertyNames(obj) {
-    var props = [];
-    do {
-        props = props.concat(Object.getOwnPropertyNames(obj));
-    } while (obj = Object.getPrototypeOf(obj));
-
-    var result = props.join('\r\n');
-    alert(String(result));
-}
 // endregion
