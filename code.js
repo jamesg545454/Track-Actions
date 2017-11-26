@@ -94,7 +94,7 @@ function trackAction(actionValue)
                     if ( track.isEmpty() )
                     {
                         // only remove empty visible audio and midi tracks
-                        if (track.mediaType == "Audio" || track.mediaType == "Music"  && track.mediaType != null)
+                        if (track.mediaType == "Audio" || track.mediaType == "Music")
                         {
                             // only save version backup on the first loop iteration
                             if (savedEmpty == false) { saveNewVersion("Before Removing Empty Tracks"); savedEmpty = true; }
