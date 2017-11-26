@@ -217,11 +217,11 @@ function trackAction(actionValue)
                 catch(err)
                 {
                     // if parse fails, default to -10 dim
-                    dimLevel = (-10) ;
+                    dimLevel = -10 ;
                 }   
                 
                 // if the dim level is not a valid number, use the default -10 dim level
-                 if ( isNaN( dimLevel ) ) { dimLevel = (-10) }
+                 if ( isNaN( dimLevel ) ) { dimLevel = -10 }
 
                 // convert the dim level db value to a floating point number
                 var dim = ( Math.pow ( 10, parseFloat( dimLevel/20 ) ) );
