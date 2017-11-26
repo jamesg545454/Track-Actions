@@ -2,8 +2,7 @@
 
 Adds new actions to **Presonus Studio One** 3.5 or greater as described below.  <br>
 
-**Installation** <br>
-Download and unzip [the zip file from here](https://github.com/ExpressMix/Track-Actions/raw/master/trackactions102.zip) and put the **trackactions.package** file in the **Studio One 3\Scripts** folder and restart Studio One. <br>
+**Installation:** Download and unzip [the zip file from here](https://github.com/ExpressMix/Track-Actions/raw/master/trackactions102.zip) and put the **trackactions.package** file in the **Studio One 3\Scripts** folder and restart Studio One. <br>
 
 ---
 
