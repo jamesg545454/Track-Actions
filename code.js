@@ -194,7 +194,7 @@ function trackAction(actionValue)
                 Host.GUI.Commands.deferCommand("Edit", "Delete");
 
                 // only fire paste if media was cut from the original active layer to
-                // avoiding potentially pasting the wrong data to the active layer
+                // avoiding potentially pasting the wrong data to the last active layer
                 if (mediaWasCut)
                 {      
                     Host.GUI.Commands.deferCommand("Edit", "Paste at Original Position");
