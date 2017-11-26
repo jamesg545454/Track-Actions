@@ -131,7 +131,7 @@ function trackAction(actionValue)
             
             case "removeInactiveLayers":
 
-            // this function cuts media from the active layer, gets the number of inactive layers, removes all inactive layers,
+            // this function cuts media from the active layer, counts the total number of layers, removes layer count -1,
             // deletes any media from the last layer, then pastes the original media back onto the active layer, essentially
             // removing all inactive layers and leaving the original media on the active layer at the same position.
 
