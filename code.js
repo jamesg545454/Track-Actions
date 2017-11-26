@@ -719,7 +719,6 @@ function getFadeSettings()
         // default settings if nothing has been saved yet
         fade.length = 0.005;
         fadeType = 1;
-        bend = 0.6571009159088134765625;
     }
 
     // set a good default bend curve based on the fade type
