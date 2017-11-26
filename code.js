@@ -143,8 +143,11 @@ function trackAction(actionValue)
             
                 // act on the first selected track only
                 var track = trackList.getSelectedTrack(0);
+                
+                // if no track is currently selected, do nothing
+                if (track == undefined) { return; }
 
-                // if it has no inactive layers don't do anything
+                // if the track has no inactive layers don't do anything
                 var count = track.layers.count;
                 if ( count < 2 || count == undefined ) { return; }
 
