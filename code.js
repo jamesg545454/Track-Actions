@@ -136,7 +136,7 @@ function trackAction(actionValue)
             // removing all incactive layers and leaving the original media back to the active layer at the same position.
 
             // this could be done with a macro except for it having no way to know the number of layers ahead of time and not
-            // being able to defer the remove layer actions
+            // being able to defer the remove layer actions, and of course not being able to flag if media was cut or not
 
             var trackList =  this.context.mainTrackList;
             var mediaWasCut = false;
