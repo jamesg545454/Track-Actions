@@ -5,7 +5,7 @@ Adds new actions to **Presonus Studio One** 3.5 or greater as described below.  
 **Installation** <br>
 To edit and compile this kind of script package, zip up all of the files, change the file extender to **.package**, and put it the **Studio One 3\Scripts** folder and restart Studio One. <br>
 
-*The **trackactions.###.zip** file is here in the repository and the package file is in that zip so if you dowenload and edit the code and zip it up again, there's no need to include that file in your package.*
+*The **trackactions.###.zip** file is already here in the repository to dowenload and unzip and put the package file in your scripts folder.*
 
 ---
 
