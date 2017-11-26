@@ -1,4 +1,4 @@
-# Track-Actions Package 1.0.2
+# Track-Actions Package
 
 Adds new actions to **Presonus Studio One** 3.5 or greater as described below.  <br>
 
@@ -53,5 +53,5 @@ These move the play cursor forward or backward by the grid value if snap is on o
 ---
 
 **Version 1.0.2**
-+ Fix: Non-fatal error with Remove Inactive Layers if no arrange track is selected.
++ **Fix:** Non-fatal error with Remove Inactive Layers if no arrange track is selected.
 
