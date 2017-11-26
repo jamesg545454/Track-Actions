@@ -205,9 +205,10 @@ function trackAction(actionValue)
 
                 // get the master bus object
                 var master = getMasterBus(this.context);
-                var dimLevel = 0;
+                var dimLevel = 1;
             
-                // try to get the dim value from the master bus name       
+                // try to get the dim value from the master bus name 
+                // ex: [ "Master - 15" ] or [ "Master -20" ] etc.
                 try
                 {
                     var data = master.label.split("-");                
@@ -218,6 +219,9 @@ function trackAction(actionValue)
                     // if parse fails, default to -10 dim
                     dimLevel = (-10) ;
                 }   
+                
+                // if the dim level is not a valid number, use the default -10 dim level
+                 if ( isNaN( dimLevel ) ) { dimLevel = (-10) }
 
                 // convert the dim level db value to a floating point number
                 var dim = ( Math.pow ( 10, parseFloat( dimLevel/20 ) ) );
