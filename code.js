@@ -132,12 +132,12 @@ function trackAction(actionValue)
             case "removeInactiveLayers":
 
             // this function cuts media from the active layer, counts the total number of layers, removes layer count -1,
-            // deletes any media from the last layer, then pastes the original media back onto the active layer, essentially
-            // removing all inactive layers and leaving the original media on the active layer at the same position.
+            // deletes any media from the last layer, then pastes the original media back onto the active layer.
 
             // this could be done with a macro except for it having no way to know the number of layers ahead of time and not
-            // being able to defer the remove layer actions, and of course not being able to flag if media was cut or not
-
+            // being able to defer the remove layer actions, and of course not being able to flag if media was cut or not or to
+            // conditionally cut and paste media
+                
             var trackList =  this.context.mainTrackList;
             var mediaWasCut = false;
             
