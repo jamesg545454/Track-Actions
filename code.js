@@ -88,6 +88,7 @@ function trackAction(actionValue)
                 // iterate tracks and save a version backup before removing the first track
                 for (i=0; i < tracks.length; i++)
                 {
+                    // get the current track object
                     var track = tracks[i];
 
                     if ( track.isEmpty() )
