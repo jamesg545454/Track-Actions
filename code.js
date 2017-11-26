@@ -82,10 +82,10 @@ function trackAction(actionValue)
             // region   ----------- REMOVE VISIBLE EMPTY TRACKS ---------------------------------------------------------------------
             case "removeEmptyTracks":
 
-                // remove all tracks with no media on the active layer
+                // get an array of all arrange tracks
                 var tracks = getTracks(this.context);
 
-                // iterate and save a version backup before removing the first track
+                // iterate tracks and save a version backup before removing the first track
                 for (i=0; i < tracks.length; i++)
                 {
                     var track = tracks[i];
@@ -95,8 +95,10 @@ function trackAction(actionValue)
                         // only remove empty visible audio and midi tracks
                         if (track.mediaType == "Audio" || track.mediaType == "Music"  && track.mediaType != null)
                         {
-                            // only save version on first loop iteration
+                            // only save version backup on the first loop iteration
                             if (savedEmpty == false) { saveNewVersion("Before Removing Empty Tracks"); savedEmpty = true; }
+                           
+                            // remove the track
                             this.functions.removeTrack(track);
                         }               
                     }
@@ -108,9 +110,11 @@ function trackAction(actionValue)
             // region   ----------- REMOVE VISIBLE DISABLED TRACKS ------------------------------------------------------------------
             
             case "removeDisabledTracks":
+                
+                // get an array of all arrange tracks
+                var tracks = getTracks(this.context);
 
-                var tracks = getTracks( this.context);
-
+                // iterate tracks
                 for (i=0; i < tracks.length; i++)
                 {
                     var track = tracks[i];
@@ -118,8 +122,10 @@ function trackAction(actionValue)
                     // avoid errors on tracks that cannot be disabled
                     if ( track.channel != undefined && track.channel.disabled == true )
                     {
-                        // only save version on first loop iteration
+                        // only save a version backup on first loop iteration
                         if (savedDisabled == false) {saveNewVersion("Before Removing Disabled Tracks"); savedDisabled = true; }
+                        
+                        // remove the track
                         this.functions.removeTrack(track);
                     }
                 }
@@ -214,9 +220,9 @@ function trackAction(actionValue)
                 }   
 
                 // convert the dim level db value to a floating point number
-                var dim = ( Math.pow( 10, parseFloat( dimLevel/20 ) ) );
+                var dim = ( Math.pow ( 10, parseFloat( dimLevel/20 ) ) );
 
-                // if master fader not at unity set to unity, else, set dim level
+                // if the master fader is not at unity set it to unity, else set it to the dim level
                 switch (master.volume.toString() != "1" )
                 {
                     case  true:
