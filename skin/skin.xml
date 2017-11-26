@@ -31,15 +31,15 @@
     <!-- Forms -->
 	
     <Forms>
-        <!-- TRACK SEARCH FORM -->
-        <Form name="TrackSearch" title="Filter Tracks" width="230" height="50"  image="background" windowstyle="dialogstyle restorepos" >
+        <!-- TRACK FILTER FORM -->
+        <Form name="TrackSearch" title="Filter Tracks" width="200" height="50"  image="background" windowstyle="dialogstyle restorepos" >
 
             <View size="15,7,250,600" >
                 <Vertical spacing="4" margin="0" >  
                     <Label title='' height='2'  />
 
                     <Horizontal spacing="4" margin="0">   
-                        <EditBox name="searchBox"  width='115' height='24' options="focus" style="MyEditBox"/>
+                        <EditBox name="searchBox"  width='150' height='24' options="focus" style="MyEditBox"/>
                         <Button name="helpButton"  title=" ?" width='15' height='24' options="focus" style="MyButton"/>
                     </Horizontal>              
                      <Label title='' height='10'  />
