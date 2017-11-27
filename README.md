@@ -32,7 +32,7 @@ These two actions remove all visible tracks that have no media clips on their ac
   Dialog: Only show the arrange tracks which contain the case insensitive search text, hide all others. *This action requires that **Track > Select Scene 1** be set to make all tracks visible for it to work correctly. It's a work in progress and has to exclude folder tracks by necessity.*
   
   
-+  ![alt text](https://image.prntscr.com/image/R_BDBb1QR7u722a-CaYmyw.gif)
+![alt text](https://image.prntscr.com/image/R_BDBb1QR7u722a-CaYmyw.gif)
 
 +  **Replace Track Names** <br>
   Dialog: Batch replace track names, case sensitive matching.
