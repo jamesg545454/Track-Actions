@@ -52,11 +52,11 @@ These move the play cursor forward or backward by the grid value if snap is on o
 ---
 
 **Version 1.0.2**
-+ **Fixed:** Non-fatal error with Remove Inactive Layers if no arrange track is selected. <br>
-+ **Change:** Adjusted Track Filter form and controls.
++ **Fixed:** Non-fatal error with **Remove Inactive Layers** if no arrange track is selected. <br>
++ **Change:** Adjusted **Track Filter** form and controls.
 
 ***Version 1.0.3***
 
-+ **Added:** Consolidated the Midi Logical Editor into the package.<br>
++ **Added:** Consolidated the **Midi Logical Editor** into the package.<br>
 
 ![alt text](https://image.prntscr.com/image/Qc-KR_zbSRCBKmLSj47x6w.png)
