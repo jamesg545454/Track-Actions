@@ -57,6 +57,6 @@ These move the play cursor forward or backward by the grid value if snap is on o
 
 ***Version 1.0.3***
 
-+ **Added:** Consolidated the **Midi Logical Editor** into the package.<br>
++ **Add:** Consolidated the **Midi Logical Editor** into the package.<br>
 
 ![alt text](https://image.prntscr.com/image/Qc-KR_zbSRCBKmLSj47x6w.png)
