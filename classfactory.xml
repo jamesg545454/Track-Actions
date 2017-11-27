@@ -169,7 +169,18 @@
 		<Attribute id="menuPriority" value="-1"/>
 	</ScriptClass>
 
-	
+<!--Logical Editor-->
+	<ScriptClass
+		classID="{C831A9F1-E0F6-4625-B32F-EE26F4D43303}"
+		category="EditTask"
+		subCategory="MusicEdit"
+		name="Logical Editor..."
+		sourceFile="logicaleditor.js"
+		functionName="doEdit"
+		metaClassID="{BA13F2CC-2F07-4CD3-9927-EFC8DDAA625D}"> 
+		<Attribute id="menuPriority" value="0"/>
+	</ScriptClass>
+
 
 
 
