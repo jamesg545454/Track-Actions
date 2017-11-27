@@ -13,7 +13,7 @@ Adds new actions to **Presonus Studio One** 3.5 or greater as described below.  
 + **Fade at Split** <br>
 Fading out and in at a clip split point based on custom fade settings. This works from right to left because the selected clip after a split defaults to the clip to the right of the split. If using it manually on an existing split, select the clip on the right.
 
-![alt text](https://image.prntscr.com/image/GGktBg6oQq2-9Js5CL_FaQ.gif =300px)
+![alt text](https://image.prntscr.com/image/GGktBg6oQq2-9Js5CL_FaQ.gif =300x)
 
 +  **Fade In/Out** <br>
   Two actions to fade clips only in or out. This is more flexible than Create Autofades as it uses the custom fade settings and only fades in or out, not both at the same time, which in some cases can inadvertently affect a transient at the clip start if the clip start is trimmed close to a drum transient or similar.
