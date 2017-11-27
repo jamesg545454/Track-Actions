@@ -2,7 +2,7 @@
 
 Adds new actions to **Presonus Studio One** 3.5 or greater as described below.  <br>
 
-**Installation:** Download and unzip [the zip file from here](https://github.com/ExpressMix/Track-Actions/raw/master/trackactions102.zip) and put the **trackactions.package** file in the **Studio One 3\Scripts** folder and restart Studio One. <br>
+**Installation:** Download and unzip [the package file from here](https://github.com/ExpressMix/Track-Actions/raw/master/trackactions.package) and put it in the **Studio One 3\Scripts** folder and restart Studio One. <br>
 
 ---
 
@@ -54,3 +54,10 @@ These move the play cursor forward or backward by the grid value if snap is on o
 **Version 1.0.2**
 + **Fixed:** Non-fatal error with Remove Inactive Layers if no arrange track is selected. <br>
 + **Change:** Adjusted Track Filter form and controls.
+
+***Version 1.0.3***
+
++ **Added:** Consolidated the Midi Logical Editor into the package.<br>
+
+Inline-style: 
+![alt text](https://s1le.files.wordpress.com/2017/01/mle.png?w=379&h=424"Logo Title Text 1")
