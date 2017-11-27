@@ -59,5 +59,4 @@ These move the play cursor forward or backward by the grid value if snap is on o
 
 + **Added:** Consolidated the Midi Logical Editor into the package.<br>
 
-Inline-style: 
-![alt text](https://s1le.files.wordpress.com/2017/01/mle.png?w=379&h=424"Logo Title Text 1")
+![alt text](https://s1le.files.wordpress.com/2017/01/mle.png)
