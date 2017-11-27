@@ -701,7 +701,7 @@ function readTextFile (folder, filename)
 
 // ---------------------------------------------------------------------------------------
 
-// read the fader settings from the fadeSettings.txt file in the User Data folder
+// read the fade settings from the fadeSettings.txt file in the User Data folder
 function getFadeSettings()
 {
     var fade =  { length:0, type:0, bend:0 } 
