@@ -59,7 +59,7 @@ These move the play cursor forward or backward by the grid value if snap is on o
 ---
 
 **Version 1.0.2**
-+ **Fixed:** Non-fatal error with **Remove Inactive Layers** if no arrange track is selected. <br>
++ **Fix:** Non-fatal error with **Remove Inactive Layers** if no arrange track is selected. <br>
 + **Change:** Adjusted **Track Filter** form and controls.
 
 **Version 1.0.3**
@@ -69,4 +69,4 @@ These move the play cursor forward or backward by the grid value if snap is on o
 ![alt text](https://image.prntscr.com/image/Qc-KR_zbSRCBKmLSj47x6w.png)
 
 **Version 1.0.4**
-+ **Fixed:** Introduced bug with **Remove Inactive Layers** in last package, was not working. <br>
++ **Fix:** Introduced bug with **Remove Inactive Layers** in last package, was not working. <br>
