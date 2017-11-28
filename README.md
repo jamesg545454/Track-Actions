@@ -67,4 +67,4 @@ These move the play cursor forward or backward by the grid value if snap is on o
 ![alt text](https://image.prntscr.com/image/Qc-KR_zbSRCBKmLSj47x6w.png)
 
 **Version 1.0.4**
-+ **Fixed:** Introduced bug with **Remove Inactive Layers** in last compile, not working. <br>
++ **Fixed:** Introduced bug with **Remove Inactive Layers** in last package, was not working. <br>
