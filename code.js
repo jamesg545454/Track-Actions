@@ -149,7 +149,7 @@ function trackAction(actionValue)
                 var track = trackList.getSelectedTrack(0);
                 
                 // if no track selected or track class has no layers, do nothing
-                if (  track == undefined || track.layers.count  ) { return; }
+                if (  track == undefined || track.layers.count == 1  ) { return; }
 
                 // get the total number of layers
                 var count = track.layers.count;
