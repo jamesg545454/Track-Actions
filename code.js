@@ -148,7 +148,7 @@ function trackAction(actionValue)
                 // get the first selected track only
                 var track = trackList.getSelectedTrack(0);
                 
-                // if tno track selected of track class has no layers, do nothing
+                // if no track selected or track class has no layers, do nothing
                 if (  track == undefined || track.layers.count  ) { return; }
 
                 // get the total number of layers
