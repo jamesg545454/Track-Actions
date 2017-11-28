@@ -14,7 +14,9 @@ Download the package file [from here](https://github.com/ExpressMix/Track-Action
 **Version 1.0.0** <br>
 
 + **Fade at Split** <br>
-Fading out and in at a clip split point based on custom fade settings. This works from right to left because the selected clip after a split defaults to the clip to the right of the split. If using it manually on an existing split, select the clip on the right.  This action allows much more efficient editing of pops, clicks, ka's, lip smacks, etc.
+Fading out and in at a clip split point based on custom fade settings. This works from right to left because the selected clip after a split defaults to the clip to the right of the split. If using it manually on an existing split, select the clip on the right.  <br>
+
+This action allows much more efficient editing of pops, clicks, ka's, lip smacks, etc.  Double click with the smart tool to split, fire the action.
 
 <img src="https://image.prntscr.com/image/GGktBg6oQq2-9Js5CL_FaQ.gif" width="300" height="250" align="middle" />
 
