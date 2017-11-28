@@ -41,8 +41,7 @@ These two actions remove all visible tracks that have no media clips on their ac
   Dialog: Batch replace track names, case sensitive matching.
 
 +  **Toggle Dim Master Bus** <br>
-  Toggle between Unity and Dim Level. Default -10 dim level. Customize dim level by appending the master bus name. <br>
-  *Example: ["Master - 20"]*
+  Toggle between Unity and Dim Level. Default -10 dim level. Customize dim level by appending the master bus name.  *Example: ["Master - 20"]*
 
 +  **Format Track Names** <br>
   Batch format track names, *i.e., bAsS > Bass*.
