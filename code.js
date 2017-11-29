@@ -592,8 +592,8 @@ function saveNewVersion(name)
 
 // -----------------------------------------------------------------------------------------------------------------------------------
 
-// track indexes change in real time when removing tracks so putting them into an array 
-// allows addressing them directly and not by index when doing things like removing tracks
+// trackList indexes change in real time when removing tracks so putting them 
+// into an array allows addressing them by a static / unchanging index 
 
 // returns an array of all visible tracks
 function getTracks(context)
