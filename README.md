@@ -66,6 +66,6 @@ To
  ***Version 1.0.4***
 
 + **Added:** Track > Bounce To Target Track.<br>
-   Select a clip and add a second track to the selection and it puts the bounce on that track.
+   Select a clip and add a second track to the selection and it puts the bounce on that track.  The source code for this function is butt ugly.
 
 
