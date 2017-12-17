@@ -424,7 +424,9 @@ function trackAction(actionValue)
             // region ------------- NUDGE PLAY CURSOR ---------------------------------------------------------------------------------
 
             case "nudgePlayCursor":
-                
+                Host.studioapp.interpretCommand("Edit", "Create Range from Cursor");
+                Host.studioapp.interpretCommand("Edit", "Move Range");
+                Host.studioapp.interpretCommand("Transport", "Locate Selection");
                 Host.studioapp.interpretCommand("Edit", "Deselect All");
                 break;
 
