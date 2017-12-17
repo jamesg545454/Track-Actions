@@ -61,6 +61,8 @@ To
 
 + **Added:** Musical Functions > Midi Logical Editor.<br>
 
+---
+
  ***Version 1.0.4***
 
 + **Added:** Track > Bounce To Target Track.<br>
