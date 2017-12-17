@@ -182,7 +182,45 @@
 	</ScriptClass>
 
 
+<!-- Bounce to Existing Track -->
+
+	<ScriptClass
+		classID="{DAB28EA2-B9EA-4C45-AE95-4566E3A3FE38}"
+		category="EditTask"
+		subCategory="TrackEdit"
+		name="Bounce to Target Track"
+		sourceFile="code.js"
+		functionName="bounceEventsToTargetTrack"
+		metaClassID="{72B820F0-CFA0-4008-B470-5D242C6521641}"> 
+		<Attribute id="menuPriority" value="0"/>
+	</ScriptClass>
+
+	
+	<ScriptClass
+		classID="{59A2A6D9-F2B6-41F6-A5B5-896B49321B0F}"
+		category="EditTask"
+		subCategory="TrackEdit"
+		name="Script Helper: Bounce To New Track"
+		sourceFile="code.js"
+		functionName="bounceToNewTrack"
+		metaClassID="{06D739E7-406C-4F25-B777-03E0F67546E1}"> 
+		<Attribute id="menuPriority" value="-1"/>
+	</ScriptClass>
+
+	<ScriptClass
+		classID="{7BF0C69C-59C9-4430-847E-4B3AC48F671A}"
+		category="EditTask"
+		subCategory="TrackEdit"
+		name="Script Helper: Finish Bounce To New Track"
+		sourceFile="code.js"
+		functionName="finishBounceToNewTrack"
+		metaClassID="{C0FF2750-C308-4A3C-A48D-44D59EC472DB}"> 
+		<Attribute id="menuPriority" value="-1"/>
+	</ScriptClass>
+
+	
 
 
 	
+
 </ClassFactory>
