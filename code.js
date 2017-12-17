@@ -425,8 +425,7 @@ function trackAction(actionValue)
 
             case "nudgePlayCursor":
                 Host.studioapp.interpretCommand("Edit", "Create Range from Cursor");
-                Host.studioapp.interpretCommand("Edit", "Move Range");
-                Host.studioapp.interpretCommand("Transport", "Locate Selection");
+                Host.studioapp.interpretCommand("Transport", "Locate Selection End");
                 Host.studioapp.interpretCommand("Edit", "Deselect All");
                 break;
 
