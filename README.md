@@ -49,7 +49,7 @@ Adds new actions to **Presonus Studio One** version 3 and greater as described b
   These move the play cursor forward or backward by the grid value if snap is on otherwise in 1 ms steps.  *They exist in the Track command category to allow them to be non-contextual to media selection and also because the Transport menu is not available to scripted actions.*
 
 ---
-To
+
 ***Version 1.0.2***
 
 + **Fixed:** Non-fatal error with Remove Inactive Layers if no arrange track is selected.<br>
