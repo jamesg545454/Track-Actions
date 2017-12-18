@@ -2,6 +2,7 @@
 <MetaInformation>
 
     <Attribute id="Package:ID" value="trackActions"/>
+    <Attribute id="Version" value="1.0.4"/>
     <Attribute id="Package:SkinFile" value="skin/"/>
     
 </MetaInformation>
